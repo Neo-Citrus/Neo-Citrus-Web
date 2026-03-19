@@ -1,0 +1,27 @@
+---
+pagination:
+    data: collections.gallery
+    size: 6
+    alias: arts
+---
+
+{% layout "body.liquid", title: "Gallery" %}
+{% block content %}
+<h1> Gallery </h1>
+   <ul class="art-list"> {%- for post in collections.gallery reversed -%}
+    <li 
+    ><a href="{{ post.url }}">
+        <span class="art-image"><img src="{{post.data.images[0].path}}" alt="{{post.data.images[0].alt}}"></span>
+        <span class="art-title">{{post.data.title}}</span>
+        <span class="date">{{post.data.date | date: "%Y-%m-%d"}}</span>
+    </a>
+        {%- for tag in post.data.tags -%}
+        <span class="tag"><a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a></span>
+        {%- endfor -%}
+    </li>
+    {%- endfor -%}
+
+
+</ul>
+{% include "pagination.liquid" %}
+{% endblock %}

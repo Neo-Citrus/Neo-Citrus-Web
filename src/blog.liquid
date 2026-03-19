@@ -1,0 +1,27 @@
+---
+pagination:
+    data: collections.blog
+    size: 6
+    alias: posts
+---
+
+{% layout "body.liquid", title: "Blog" %}
+{% block content %}
+<h1> Blog </h1>
+<ul class="post-list">
+    {%- for post in collections.blog reversed -%}
+    <li 
+        {% if post.data.icon %} style="list-style-type: '{{post.data.icon}}';"{% endif %}
+    ><a class= "blog-title" href="{{ post.url }}">
+        {{post.data.title}}</a> 
+        <a class= "blog-date"> | {{post.data.date | date: "%Y-%m-%d"}} | </a> 
+        {%- for tag in post.data.tags -%}
+        <span class="tag"><a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a></span>
+        {%- endfor -%}
+        <p class="post-preview">{{post.content | strip_html | truncatewords: 10 }}
+        </p>
+    </li>
+    {%- endfor -%}
+</ul>
+{% include "pagination.liquid" %}
+{% endblock %}

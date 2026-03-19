@@ -1,0 +1,15 @@
+{% layout "body.liquid" %}
+
+{% block content %}
+    <article>
+        <h1 class="title">{{title}}</h1>
+        <div class="date">{{date | date: "%Y-%m-%d"}}</div>
+        {% for tag in tags %}
+        <span class="tag"><a href="/tags/{{tag | slugify }}/">#{{ tag }}</a></span>
+        {% endfor %}
+        <hr>
+        {{content}}
+    </article>
+
+
+{% endblock %}

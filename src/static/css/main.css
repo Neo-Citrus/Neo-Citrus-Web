@@ -1,0 +1,663 @@
+html {
+ background-image: url("/static/images/background.png");  
+    background-size: cover;
+    min-height: 100vh;
+    cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1113.cur), auto;
+
+}
+
+body {
+    background-color: transparent;
+    font-family: "LT Asus";
+    cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1113.cur), auto;
+}
+
+.button-title {
+    font-size: 1em;
+    text-align: center;
+}
+
+.button-of-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn {
+    background-color: rgb(10, 120, 246);
+    border-color: rgb(0, 37, 91);
+    border-radius: 25px;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.btn:hover {
+    background-color: rgb(81, 160, 250);
+    box-shadow: 1px 1px 1px 1px rgba(21, 38, 54, 0.74);
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+        img {
+            border-radius: 10px;
+            size: 100ch;
+            margin: 0.5ch;
+        }
+    a:hover {
+        cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+    }
+}
+ 
+.footer {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+header {
+    background: linear-gradient(0deg, rgb(0, 63, 156) 0%, rgb(67, 170, 255) 22%, rgb(100, 224, 255) 47%, rgb(9, 165, 255) 76%);
+    color: rgb(54, 65, 105);
+    display: block;
+    margin: 16% 5% 5%;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 1ch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 90%;
+    box-shadow: 0px 4px 9px black;
+
+    a {
+        color:rgb(37, 57, 82); 
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: normal;       
+        font-size: 2em;
+        text-decoration: none;
+        text-shadow: 2px 2px 2px #6589e4;
+        
+    }
+    a:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: #1f369c;
+        cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+    }
+    a[aria-current="page"]{
+        /* filter: drop-shadow(0 0 8px white) drop-shadow(0 0 8px white); */
+        text-decoration: underline;
+        text-decoration-color: #1f369c;
+    }
+    h1 {
+        margin: 0;
+        /* flex-grow: 1; */
+    }
+    nav {
+        /* display: flex;
+        justify-content: end;
+        flex-grow: 1; */
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 5ch;
+            padding-inline: 1ch; 
+        }
+        li {
+            list-style: none;
+        }
+
+        li:before {
+            content: none;
+        }
+    }
+
+
+}
+
+    #nav-skip {
+        position: absolute;
+        left: 1ch;
+        inset-block: 0;
+        align-self: center;
+        padding: 0.5ch;
+    }
+    #nav-skip:not(:focus) {
+        top: -1000px;
+    }
+   
+
+
+.logo { 
+    position: absolute;
+    width: 80%;
+    z-index: 2;
+    top: 8;
+    left: 10%;
+    pointer-events: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+    text-decoration: underline;
+    text-decoration-color: #1f369c;
+    font-weight: bold;
+}
+
+a:visited {
+    color: rgb(0, 5, 29);
+}
+
+h1 {
+    color:#000;
+    text-shadow: 3px 3px 3px rgb(0, 108, 197);
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+}
+
+h3 {
+    color: #000;
+    text-align: center;
+    font-size: 1em;
+}
+
+h4 {
+    color: #000;
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.taglist li {
+    font-size: 1.5em;
+    height: 1.5em;
+}
+
+
+p {
+    padding-left: 3em;
+    padding-right: 3em;
+    color: rgb(17, 18, 22);
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+li {
+    color: rgb(17, 18, 22);
+    list-style-type: disc;
+    font-size: 1em;
+}
+
+.tagged-posts {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.5em;
+    height: 1.5em;
+}
+
+.complete-taglist {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.special-interests{
+
+
+    li {
+        color: rgb(17, 18, 22);
+        list-style-type: none;
+        font-size: 1em;
+        margin-right: 2em;
+    }
+
+    li:before{
+        content: url("/static/images/icon.ico");
+        display: inline-block;
+        vertical-align: -0.5em;
+        margin-right: 0.3em;
+    }
+}
+
+.pagination {
+    text-align: center;
+    margin: 2ch;
+    margin-top: 3ch;
+
+}
+
+
+.tag {
+    color: rgb(21, 22, 27);
+    display: inline-block;
+    margin: 0.5ch;
+    max-width: fit-content;
+    max-height: fit-content;
+    background: linear-gradient(0deg, rgb(52, 125, 236) 45%, rgb(36, 113, 228) 46%, rgb(0, 102, 218) 69%, rgb(0, 65, 161) 100%); 
+    border-radius: 25px;
+    padding: 1%;
+    font-weight: bold;
+    font-style: italic;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1112.cur), auto;
+
+}
+
+.tag:hover {
+    color: rgb(6, 9, 22);
+    text-decoration: none;
+    background: linear-gradient(0deg, rgb(123, 176, 255) 45%, rgb(72, 145, 255) 46%, rgb(0, 119, 255) 69%, rgb(0, 75, 189) 100%); 
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+}
+
+.tag a:visited {
+    color:  rgb(0, 5, 29);
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+}
+
+#content {
+    max-width: 90%;
+    height: auto;
+    padding-inline: 1ch;
+    margin-inline: auto;
+    margin-bottom: auto;
+    color:rgb(6, 36, 71); 
+    border-style: solid;
+    border-color: #75bcff;
+    border-radius: 25px;
+    background: linear-gradient(55deg, rgba(39, 131, 184, 0.7) 0%, rgba(8, 91, 146, 0.7) 13%, rgba(83, 178, 255, 0.7) 20%, rgba(118, 203, 255, 0.7) 23%, rgba(76, 158, 224, 0.7) 27%, rgba(88, 138, 212, 0.7) 29%, rgba(119, 189, 255, 0.7) 37%, rgba(30, 127, 184, 0.7) 52%, rgba(115, 215, 255, 0.7) 53%, rgba(69, 156, 207, 0.7) 60%, rgba(127, 212, 255, 0.7) 71%, rgba(91, 169, 206, 0.7) 81%, rgba(76, 145, 191, 0.7) 86%, rgba(84, 194, 245, 0.7) 92%);
+    box-shadow: 0px 4px 9px black;
+    padding-left: 2ch;
+    padding-bottom: 1ch;
+}
+
+.frutiger-aero {
+    p {
+        text-align: center;
+        margin-left: -0.3em;
+    }
+}
+
+article {
+    text-align: center;
+    
+        .title, .date {
+            text-align: center;
+             margin: 2%;
+    }
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+            text-decoration: none;
+        }
+}
+
+hr {
+    color: #0073c0;
+    margin-top: 2ch;
+    display: block;
+}
+
+.pagination {
+
+    a {
+        background: linear-gradient(0deg, rgb(52, 125, 236) 45%, rgb(36, 113, 228) 46%, rgb(0, 102, 218) 69%, rgb(0, 65, 161) 100%); 
+        border-radius: 25px;
+        padding: 1%;
+        font-weight: normal;
+        transition-duration: 0.2s;
+        text-decoration: none;
+    }
+
+    span {
+        background: linear-gradient(0deg, rgb(33, 80, 150) 45%, rgb(26, 80, 163) 46%, rgb(0, 68, 146) 69%, rgb(0, 37, 91) 100%); 
+        border-radius: 25px;
+        padding: 1%;
+        font-weight: normal;
+        transition-duration: 0.2s;
+        text-decoration: none;
+    }
+
+    .page-numbers {
+        background: linear-gradient(0deg, rgb(33, 80, 150) 45%, rgb(26, 80, 163) 46%, rgb(0, 68, 146) 69%, rgb(0, 37, 91) 100%); 
+        border-radius: 25px;
+        padding: 1%;
+        font-weight: normal;
+        transition-duration: 0.2s;
+        text-decoration: none;
+    }
+}
+
+.post-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-left: -5ch;
+
+
+    .blog-title {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: rgb(21, 22, 27);
+        text-decoration: none;
+        padding-right: 0.3ch;
+        
+    }
+
+    .blog-title:hover {
+        text-decoration: underline;
+        cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+    }
+ 
+    .blog-date {
+        font-weight: normal;
+        font-size: 1em;
+    }
+
+
+    li {
+        width: 40%;
+        display: block;
+        position: relative;
+        list-style-type: none;
+        padding: 1.5ch;
+        margin-inline: auto;
+        border-style: solid;
+        border-color: rgb(51, 110, 199);
+        background: linear-gradient(55deg, rgba(148, 216, 255, 0.7) 0%, rgba(43, 161, 240, 0.7) 13%, rgba(127, 197, 255, 0.7) 20%, rgba(185, 228, 255, 0.7) 23%, rgba(117, 172, 218, 0.7) 27%, rgba(129, 164, 218, 0.7) 29%, rgba(170, 214, 255, 0.7) 37%, rgba(83, 171, 223, 0.7) 52%, rgba(175, 232, 255, 0.7) 53%, rgba(69, 156, 207, 0.7) 60%, rgba(178, 229, 255, 0.7) 71%, rgba(91, 169, 206, 0.7) 81%, rgba(76, 145, 191, 0.7) 86%, rgba(171, 228, 255, 0.7) 92%);
+        border-radius: 25px;
+        text-align: left;
+
+    }
+
+    li:before{
+        content: url("/static/images/icon.ico");
+        display: inline-block;
+        vertical-align: -0.5em;
+        margin-right: 0.3em;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover{
+        cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+    }
+
+}
+
+.post-preview {
+    color: rgb(21, 22, 27);
+    text-align: left;
+    font-size: 1em;
+}
+
+.art-list {
+    margin-top: 5ch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1ch;
+    padding: 0;
+
+    li {
+        /* min-width: fit-content; */
+        width: 40%;
+        height: fit-content;
+        /* flex-grow: 1; */
+        background: transparent;
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+        font-size: large;
+        padding: 1ch;
+        transition-duration: 0.2s;
+        border-radius: 25px;
+
+        .art-image {
+                flex-grow: 1;
+                padding-bottom: 1ch;
+            }
+
+        .art-title {
+            font-size: 1.5em;
+        }
+
+        .date{
+            font-weight: normal;
+            font-size: 1.3em;
+            padding-top: 1ch;
+            margin-bottom: 1ch;
+
+        }
+
+        &:hover{
+           background-color: rgb(157, 219, 255);
+           cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+        }
+        a {
+            color: rgb(17, 18, 22);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            max-height: fit-content;
+            font-size: 1.7vmax;
+        }
+
+        a:hover {
+            cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            margin-inline: auto;
+            border-radius: 25px;
+        }
+
+    }
+}
+
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+
+        img {
+            width: 4vmax;
+            border-radius: 10px;
+        }
+}
+
+.art {
+    max-height: 50%;
+    max-width: 70%;
+    margin-inline: auto;
+    border-radius: 25px;
+    display: block;
+    cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1112.cur), auto;
+}
+
+.containment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+pre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+code {
+    border-radius: 25px;
+}
+
+.eleventy-plugin-gallery {
+    row-gap: 0.05em;
+}
+
+.eleventy-plugin-gallery img {
+  transition: ease 0.5s;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+}
+
+.eleventy-plugin-gallery img:hover {
+  opacity: 0.5;
+  transition: ease 0.5s;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+}
+
+
+@media only screen and (max-width: 844px ) {
+
+    #content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logos { 
+        margin: 1em;
+        flex-direction: row;
+    }
+
+    header{
+        margin-left: 3%;
+    }
+
+    pre {
+        width: 80%;
+    }
+
+    pre:hover {
+        cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
+    }
+}
+
+.eleventy-plugin-gallery a > img {
+  /* width: 50%; */
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.eleventy-plugin-gallery a {
+  flex: 1;
+  max-width: 40ch;
+  min-width: 20ch;
+}
+.eleventy-plugin-gallery {
+  /* display: grid; */
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.2rem;
+  row-gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+
+}
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "LT Asus";
+    src: url('/static/css/font/LTAsus-LightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+
+}

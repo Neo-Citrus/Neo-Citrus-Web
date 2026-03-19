@@ -1,0 +1,17 @@
+{% assign currentUrl = page.url %}
+
+<img class="logo" src="/static/images/logo.png" alt= "Neo Citrus Web Logo">
+<header>
+    <a href="#content" id="nav-skip">Skip Navigation</a>
+    <nav>
+        <ul>
+            <li><a {% if currentUrl == '/' %}aria-current="page"{% endif %} href="/">Home</a></li>
+            <li><a {% if currentUrl == '/about/' %}aria-current="page"{% endif %} href="/about/">About</a></li>
+            <li><a {% if currentUrl == '/blog/' %}aria-current="page"{% endif %} href="/blog/">Blog</a></li>
+            <li><a {% if currentUrl == '/gallery/' %}aria-current="page"{% endif %} href="/gallery/">Gallery</a></li>
+            <li><a {% if currentUrl == '/manifesto/' %}aria-current="page"{% endif %} href="/manifesto/">Manifesto</a></li>
+        </ul>
+    </nav>
+</header>
+
+

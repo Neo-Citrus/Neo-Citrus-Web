@@ -1,0 +1,60 @@
+<html lang= "en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>{{title | default: config.site_title}}</title>
+    <link rel="shortcut icon" href="/static/images/icon.ico" type="image/ico">
+    <link rel="icon" href="/static/images/icon.ico" type="image/ico">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/mono-blue.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    {% block header %}
+        <meta property="theme-color" content="#00bfff">
+        <meta property="og:site_name" content="neo-citrus-web.neocities.org">
+        <meta property="twitter:title" content="{{title}}">
+        <meta property="og:title" content="{{title}}">
+        <meta property="og:article:author" content="Neo" />
+        <meta property="og:article:author" content="Neo" />
+        <meta name="author" content="Neo" />
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://neo-citrus-web.neocities.org/static/images/icon.ico">
+        <meta property="og:image:alt" content="An orange slice">
+        <meta property="twitter:card" content="summary">
+    {% endblock %}
+</head>
+<body>
+{% include "nav.liquid" %}  
+<main id="content">
+{% block content %}{% endblock %}
+</main>  
+<h3 class="button-title"> My button + Friends' Websites <3 </h3>
+<div class="buttons">
+<a href="https://youtu.be/dQw4w9WgXcQ?si=grwiXBeNif4LhtDM" class="button"> <img src="/static/images/button.png" alt= "https://neo-citrus-web.neocities.org"> </a>
+<a href="https://adamphoebe.neocities.org"> <img src="https://adamphoebe.neocities.org/files/8831/8831.gif" alt="adamphoebe.neocities.org"></a>
+<a href="https://beefox.xyz"> <img src="https://beefox.xyz/static/buttons/88x31-beefox.gif" alt="beefox.xyz"> </a>
+<a href="https://syn7ropy.space/"> <img src="/static/images/88x31-SYN7ROPY.gif" alt="syn7ropy.space"> </a>
+<a href="https://solkind.red/"> <img src="/static/images/solkindred.png" alt="solkind.red"> </a>
+<a href="https://thecakehasnolies.neocities.org/"><img src="https://thecakehasnolies.neocities.org/but4.gif" width="88" height="31" alt="Lew's Silly Site"></a>
+</div>
+
+
+<h3> Add my button to your website! </h3>
+
+<div class="containment">
+<pre title="click on me!">
+<code class="language-html" contenteditable="true" spellcheck="false">
+&lt;a href="https://neo-citrus-web.neocities.org/"&gt;
+    &lt;img src="https://neo-citrus-web.neocities.org/static/images/button.png" alt="neo-citrus-web.neocities.org"&gt;
+&lt;/a&gt;
+</code>
+</pre>
+</div>
+
+</body>
+<footer class="footer">
+<p>2026 - 20XX © Eddie Aster | Neo Citrus Web</p>
+</footer>
+</html>

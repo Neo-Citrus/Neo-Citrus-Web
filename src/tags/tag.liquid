@@ -1,0 +1,37 @@
+---
+pagination:
+  data: collections.postsAscending
+  size: 1
+  addAllPagesToCollections: true
+  alias: pair
+  filter: ["tags", "tagsByPage", "all", "tagsList", "taglist"]
+permalink: "/tags/{{pair[0] | slugify}}/{% if pair[2] > 0 %}/page-{{ pair[2] | plus: 1}}{% endif %}/index.html"
+---
+
+{% layout "body.liquid" %}
+
+{% block content %}
+{% assign tag = pair[0] %}
+{% assign posts = pair[1] %}
+
+{% if pair[0] %}
+  <h1>Posts tagged with #{{ pair[0] }}</h1>
+
+  {% for post in pair[1] %}
+    <li class="tagged-posts">
+    <a href="{{post.url}}">{{ post.data.title }} </a>
+    </li>
+  {% endfor %}
+
+{% endif %}
+
+
+{% if pair[0] %}
+  {% include "pagination.liquid" %}
+{% endif %}
+
+<a class="complete-taglist" href="/tags/taglist/">Complete Taglist</a> 
+
+{% endblock %}
+
+

@@ -1,0 +1,39 @@
+{% layout "body.liquid" %}
+
+{% block header %}
+    <meta property="theme-color" content="#00bfff">
+    <meta property="og:site_name" content="neo-citrus-web.neocities.org">
+    <meta property="twitter:title" content="{{title}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="twitter:description" content="{{content | truncatewords: 25 | strip_html}}">
+    <meta property="og:description" content="{{content | truncatewords: 25 | strip_html}}">
+    <meta property="description" content="{{content | truncatewords: 25 | strip_html}}">
+    <meta property="og:article:author" content="Neo" />
+    <meta property="og:article:author" content="Neo" />
+    <meta name="author" content="Neo" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://neo-citrus-web.neocities.org{{images[0].path}}">
+    <meta property="og:image:alt" content="{{images[0].alt}}">
+    <meta property="twitter:card" content="summary_large_image"> 
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h1 class="title">{{title}}</h1>
+        {% gallery %}
+            {% for image in images %}
+               {% galleryImg image.path, image.alt %}
+            {% endfor %}
+        {% endgallery %}
+        </a>
+                <div class="date">{{date | date: "%Y-%m-%d"}}</div>
+                {% for tag in tags %}
+                <span class="tag"><a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a></span>
+             {% endfor %}
+             <hr>
+        {{content}}
+    </article>
+
+{% endblock %}
+
+

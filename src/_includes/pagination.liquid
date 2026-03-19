@@ -1,0 +1,19 @@
+{% assign pageIndex = pair[2] %}
+{% assign lastPage = pair[3] %}
+<nav class= "pagination">
+{% if pageIndex > 0 %}
+    <a class="prev" href="{{ pagination.href.prev }}/">Prev Page</a>
+{% else %}
+    <span>Prev Page</span>
+{% endif %}
+
+{%- for i in (0..lastPage) %}
+    <a class="page-numbers" href= "/tags/{{ tag | slugify }}/{% if i > 0 %}page-{{ i | plus: 1}}/{% endif %}" {% if i == pageIndex %} aria-current="page" {% endif %}>{{ i | plus: 1 }}</a>
+{%- endfor %}
+
+{% if pageIndex != lastPage %}
+    <a class="next" href="{{ pagination.href.next }}/">Next Page</a>
+{% else %}
+    <span>Next Page</span>
+{% endif %}
+</nav>

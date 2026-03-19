@@ -1,0 +1,33 @@
+---
+pagination:
+    data: collections.tagsList
+    size: 5
+    reverse: true
+    alias: taglist
+    filter:
+     - "tags"
+     - "tagsByPage"
+     - "all"
+     - "tagslist"
+---
+
+{% layout "body.liquid" %}
+
+{% block content %}
+<h1>Taglist</h1>
+
+<ul class="taglist">
+{% for tag in taglist | reversed %}
+<li>
+    <a href="/tags/{{ tag | slugify }}/">
+        #{{ tag }} | 
+    </a>
+    {{ collections[tag].length }} posts
+</li>
+{% endfor %}
+</ul>
+
+{% include "pagination.liquid" %}
+
+{% endblock %}
+
