@@ -1,9 +1,10 @@
 ---
 title: First post!
-tags: blog,devlog
-layout: post.liquid
+tags: 
+- blog
+- devlog
+layout: "post.liquid"
 date: 2026-02-14
-"last updated:": 2026-02-Sa 22:01
 ---
 
 Welcome to my first blog post! 😄 Even though you're seeing this post over my website, I've actually written it over at Obsidian! 

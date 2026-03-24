@@ -4,7 +4,7 @@
   "description": "",
   "main": "eleventy.config.js",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy": "^3.1.5",
     "a-sync-waterfall": "^1.0.1",
     "acorn": "^8.15.0",
     "acorn-walk": "^8.3.4",

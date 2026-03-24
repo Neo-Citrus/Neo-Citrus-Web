@@ -9,6 +9,7 @@ pagination:
      - "tagsByPage"
      - "all"
      - "tagslist"
+permalink: "/tags/taglist/page-{{ pagination.pageNumber }}/index.html"
 ---
 
 {% layout "body.liquid" %}
@@ -27,7 +28,7 @@ pagination:
 {% endfor %}
 </ul>
 
-{% include "pagination.liquid" %}
+{% include "pagination-taglist.liquid" %}
 
 {% endblock %}
 

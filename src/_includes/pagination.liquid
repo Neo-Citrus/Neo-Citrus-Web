@@ -1,10 +1,10 @@
 {% assign pageIndex = pair[2] %}
 {% assign lastPage = pair[3] %}
 <nav class= "pagination">
-{% if pageIndex > 0 %}
-    <a class="prev" href="{{ pagination.href.prev }}/">Prev Page</a>
-{% else %}
+{% if pageIndex == 0 %}
     <span>Prev Page</span>
+{% else %}
+    <a class="prev" href="{{ pagination.href.previous }}/">Prev Page</a>
 {% endif %}
 
 {%- for i in (0..lastPage) %}

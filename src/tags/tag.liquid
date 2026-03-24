@@ -4,7 +4,12 @@ pagination:
   size: 1
   addAllPagesToCollections: true
   alias: pair
-  filter: ["tags", "tagsByPage", "all", "tagsList", "taglist"]
+  filter: 
+    - "tags" 
+    - "tagsByPage" 
+    - "all"
+    - "tagsList"
+    - "taglist"
 permalink: "/tags/{{pair[0] | slugify}}/{% if pair[2] > 0 %}/page-{{ pair[2] | plus: 1}}{% endif %}/index.html"
 ---
 
@@ -30,7 +35,7 @@ permalink: "/tags/{{pair[0] | slugify}}/{% if pair[2] > 0 %}/page-{{ pair[2] | p
   {% include "pagination.liquid" %}
 {% endif %}
 
-<a class="complete-taglist" href="/tags/taglist/">Complete Taglist</a> 
+<a class="complete-taglist" href="/tags/taglist/page-0/">Complete Taglist</a> 
 
 {% endblock %}
 

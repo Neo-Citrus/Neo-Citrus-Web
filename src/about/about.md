@@ -1,5 +1,5 @@
 ---
-layout: "about.liquid"
+layout: about.liquid
 ---
 
 ### [What is Frutiger Aero?](/about/frutiger-aero)

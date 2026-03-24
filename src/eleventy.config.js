@@ -2,11 +2,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
     eleventyConfig.addPassthroughCopy("static");
     eleventyConfig.addPassthroughCopy("static/images/*.png");
-    eleventyConfig.ignores.add("blog/.obsidian");
-    eleventyConfig.ignores.add("blog/template");
-    eleventyConfig.ignores.add("gallery/.obsidian");
-    eleventyConfig.ignores.add("gallery/template");
-    eleventyConfig.ignores.add("static/images/.obsidian");
     eleventyConfig.addWatchTarget("_site/about");
     eleventyConfig.addWatchTarget("_site/manifesto")
     eleventyConfig.addWatchTarget("_site/tags")
@@ -25,11 +20,12 @@ module.exports = function(eleventyConfig) {
 	
 eleventyConfig.addCollection("postsAscending", (collection) => {
   const tagPages = {};
-  const posts = collection.getFilteredByGlob("gallery/*.md", "blog/*.md")
+  const posts = collection.getFilteredByGlob(["gallery/*.md", "blog/*.md"])
         .sort((a, b) => a.data.title.localeCompare(b.data.title));
   
   for (const post of posts) {
     for (const tag of post.data.tags) {
+      console.log(post.page.url, "has tag", tag);
       tagPages[tag] ||= [];
       tagPages[tag].push(post);
     }
@@ -57,7 +53,7 @@ eleventyConfig.addCollection('tagsList', (collectionApi) => {
   collectionApi.getAll().forEach((item) => {
     if (!item.data.tags) return
     item.data.tags
-      .filter((tag) => !['taglist', 'postsascending', 'all'].includes(tag))
+      .filter((tag) => !['taglist', 'postsascending' ].includes(tag))
       .forEach((tag) => tagsSet.add(tag))
   })
   return [...tagsSet].sort((a, b) => b.localeCompare(a))

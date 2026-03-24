@@ -358,7 +358,7 @@ hr {
         text-decoration: none;
     }
 
-    .page-numbers {
+    .page-numbers[aria-current="page"] {
         background: linear-gradient(0deg, rgb(33, 80, 150) 45%, rgb(26, 80, 163) 46%, rgb(0, 68, 146) 69%, rgb(0, 37, 91) 100%); 
         border-radius: 25px;
         padding: 1%;
