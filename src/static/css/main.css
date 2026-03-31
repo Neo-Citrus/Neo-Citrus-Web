@@ -1,3 +1,5 @@
+/* Html, Body and Content */
+
 html {
  background-image: url("/static/images/background.png");  
     background-size: cover;
@@ -11,6 +13,28 @@ body {
     font-family: "LT Asus";
     cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1113.cur), auto;
 }
+
+#content {
+    max-width: 90%;
+    height: auto;
+    padding-inline: 1ch;
+    margin-inline: auto;
+    margin-bottom: auto;
+    color:rgb(6, 36, 71); 
+    border-style: solid;
+    border-color: #75bcff;
+    border-radius: 25px;
+    background: linear-gradient(55deg, rgba(39, 131, 184, 0.7) 0%, rgba(8, 91, 146, 0.7) 13%, rgba(83, 178, 255, 0.7) 20%, rgba(118, 203, 255, 0.7) 23%, rgba(76, 158, 224, 0.7) 27%, rgba(88, 138, 212, 0.7) 29%, rgba(119, 189, 255, 0.7) 37%, rgba(30, 127, 184, 0.7) 52%, rgba(115, 215, 255, 0.7) 53%, rgba(69, 156, 207, 0.7) 60%, rgba(127, 212, 255, 0.7) 71%, rgba(91, 169, 206, 0.7) 81%, rgba(76, 145, 191, 0.7) 86%, rgba(84, 194, 245, 0.7) 92%);
+    box-shadow: 0px 4px 9px black;
+    padding-left: 2ch;
+    padding-bottom: 1ch;
+}
+
+
+
+
+
+/* Buttons and Social Media logos */ 
 
 .button-title {
     font-size: 1em;
@@ -54,7 +78,28 @@ body {
         cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
     }
 }
- 
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+
+        img {
+            width: 4vmax;
+            border-radius: 10px;
+        }
+}
+
+
+
+
+
+/* Footer, header and nav */
+
 .footer {
     display: flex;
     justify-content: center;
@@ -145,9 +190,7 @@ header {
         top: -1000px;
     }
    
-
-
-.logo { 
+    .logo { 
     position: absolute;
     width: 80%;
     z-index: 2;
@@ -155,22 +198,29 @@ header {
     left: 10%;
     pointer-events: none;
 
-}
-
-a {
+    a {
     text-decoration: none;
-}
+    }
 
-a:hover {
+    a:hover {
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
     text-decoration: underline;
     text-decoration-color: #1f369c;
     font-weight: bold;
+    }
+
+    a:visited {
+    color: rgb(0, 5, 29);
+    }
+
+
 }
 
-a:visited {
-    color: rgb(0, 5, 29);
-}
+
+
+
+
+/* Headers and Paragraph */
 
 h1 {
     color:#000;
@@ -197,12 +247,6 @@ h4 {
     font-size: 0.5em;
 }
 
-.taglist li {
-    font-size: 1.5em;
-    height: 1.5em;
-}
-
-
 p {
     padding-left: 3em;
     padding-right: 3em;
@@ -210,6 +254,17 @@ p {
     text-align: center;
     font-size: 1em;
     font-weight: normal;
+}
+
+
+
+
+
+/* Taglist and Tags */
+
+.taglist li {
+    font-size: 1.5em;
+    height: 1.5em;
 }
 
 li {
@@ -234,32 +289,6 @@ li {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
-.special-interests{
-
-
-    li {
-        color: rgb(17, 18, 22);
-        list-style-type: none;
-        font-size: 1em;
-        margin-right: 2em;
-    }
-
-    li:before{
-        content: url("/static/images/icon.ico");
-        display: inline-block;
-        vertical-align: -0.5em;
-        margin-right: 0.3em;
-    }
-}
-
-.pagination {
-    text-align: center;
-    margin: 2ch;
-    margin-top: 3ch;
-
-}
-
 
 .tag {
     color: rgb(21, 22, 27);
@@ -292,20 +321,28 @@ li {
 
 }
 
-#content {
-    max-width: 90%;
-    height: auto;
-    padding-inline: 1ch;
-    margin-inline: auto;
-    margin-bottom: auto;
-    color:rgb(6, 36, 71); 
-    border-style: solid;
-    border-color: #75bcff;
-    border-radius: 25px;
-    background: linear-gradient(55deg, rgba(39, 131, 184, 0.7) 0%, rgba(8, 91, 146, 0.7) 13%, rgba(83, 178, 255, 0.7) 20%, rgba(118, 203, 255, 0.7) 23%, rgba(76, 158, 224, 0.7) 27%, rgba(88, 138, 212, 0.7) 29%, rgba(119, 189, 255, 0.7) 37%, rgba(30, 127, 184, 0.7) 52%, rgba(115, 215, 255, 0.7) 53%, rgba(69, 156, 207, 0.7) 60%, rgba(127, 212, 255, 0.7) 71%, rgba(91, 169, 206, 0.7) 81%, rgba(76, 145, 191, 0.7) 86%, rgba(84, 194, 245, 0.7) 92%);
-    box-shadow: 0px 4px 9px black;
-    padding-left: 2ch;
-    padding-bottom: 1ch;
+
+
+
+
+/* Special interest list and Frutiger Aero about page */
+
+.special-interests{
+
+
+    li {
+        color: rgb(17, 18, 22);
+        list-style-type: none;
+        font-size: 1em;
+        margin-right: 2em;
+    }
+
+    li:before{
+        content: url("/static/images/icon.ico");
+        display: inline-block;
+        vertical-align: -0.5em;
+        margin-right: 0.3em;
+    }
 }
 
 .frutiger-aero {
@@ -314,6 +351,8 @@ li {
         margin-left: -0.3em;
     }
 }
+
+
 
 article {
     text-align: center;
@@ -338,7 +377,17 @@ hr {
     display: block;
 }
 
+
+
+
+
+/* Pagination navigation */
+
 .pagination {
+
+    text-align: center;
+    margin: 2ch;
+    margin-top: 3ch;
 
     a {
         background: linear-gradient(0deg, rgb(52, 125, 236) 45%, rgb(36, 113, 228) 46%, rgb(0, 102, 218) 69%, rgb(0, 65, 161) 100%); 
@@ -367,6 +416,12 @@ hr {
         text-decoration: none;
     }
 }
+
+
+
+
+
+/* Blog Posts */
 
 .post-list {
     display: flex;
@@ -438,6 +493,12 @@ hr {
     font-size: 1em;
 }
 
+
+
+
+
+/* Gallery posts */
+
 .art-list {
     margin-top: 5ch;
     display: flex;
@@ -507,22 +568,6 @@ hr {
     }
 }
 
-
-.logos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    margin-bottom: 2em;
-
-        img {
-            width: 4vmax;
-            border-radius: 10px;
-        }
-}
-
 .art {
     max-height: 50%;
     max-width: 70%;
@@ -531,6 +576,12 @@ hr {
     display: block;
     cursor: url(https://cur.cursors-4u.net/games/gam-12/gam1112.cur), auto;
 }
+
+
+
+
+
+/* Code block */
 
 .containment {
     display: flex;
@@ -551,9 +602,11 @@ code {
     border-radius: 25px;
 }
 
-.eleventy-plugin-gallery {
-    row-gap: 0.05em;
-}
+
+
+
+
+/* 11ty Plugin Gallery */
 
 .eleventy-plugin-gallery img {
   transition: ease 0.5s;
@@ -566,6 +619,34 @@ code {
   cursor: url(http://www.rw-designer.com/cursor-extern.php?id=40823), auto;
 }
 
+.eleventy-plugin-gallery a > img {
+  /* width: 50%; */
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.eleventy-plugin-gallery a {
+  flex: 1;
+  max-width: 40ch;
+  min-width: 20ch;
+}
+
+.eleventy-plugin-gallery {
+  /* display: grid; */
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.2rem;
+  row-gap: 0.05rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* Media Queries */
 
 @media only screen and (max-width: 844px ) {
 
@@ -592,26 +673,11 @@ code {
     }
 }
 
-.eleventy-plugin-gallery a > img {
-  /* width: 50%; */
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-.eleventy-plugin-gallery a {
-  flex: 1;
-  max-width: 40ch;
-  min-width: 20ch;
-}
-.eleventy-plugin-gallery {
-  /* display: grid; */
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.2rem;
-  row-gap: 0.1rem;
-  align-items: center;
-  justify-content: center;
-}
+
+
+
+
+/* Fonts */
 
 @font-face {
     font-family: "LT Asus";
